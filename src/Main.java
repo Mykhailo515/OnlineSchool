@@ -8,5 +8,8 @@ public class Main {
 
         System.out.println(Lectures.counter);
 
+        Lectures fourthLectures = new Lectures();
+        Lectures fifthLectures = new Lectures();
+
     }
 }
