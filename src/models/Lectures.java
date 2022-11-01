@@ -11,6 +11,7 @@ public class Lectures {
         ID = counter++;
 
     }
+    Lectures thirdLectures = new Lectures();
 
     }
 
