@@ -7,7 +7,6 @@ public class Main {
         Lectures thirdLectures = new Lectures();
 
         System.out.println(Lectures.counter);
-        Lectures fourLectures = new Lectures();
 
     }
 }
