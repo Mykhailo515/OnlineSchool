@@ -5,15 +5,14 @@ public class Lectures {
     private AddMaterials addMaterials;
     private static long ID;
     public static long counter;
-    public int IDCourse;
+    private Course course;
+    public static Course id;
 
 
     public Lectures ()  {
         ID = counter++;
-
     }
-    Lectures thirdLectures = new Lectures();
-
     }
+
 
 
