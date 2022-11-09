@@ -5,14 +5,18 @@ public class Lectures {
     private AddMaterials addMaterials;
     private static long ID;
     public static long counter;
-    private Course course;
-    public static Course id;
+    public int courseID;
 
-
-    public Lectures ()  {
+    public Lectures(int courseID) {
         ID = counter++;
+        this.courseID = courseID;
     }
-    }
+
+
+
+
+}
+
 
 
 
