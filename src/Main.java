@@ -11,6 +11,7 @@ public class Main {
 //        Lectures fourthLectures = new Lectures();
 //        Lectures fifthLectures = new Lectures();
 
+
         Course course = new Course();
         Lectures lectures = new Lectures(course.getID());
         Lectures firstLectures = new Lectures(course.getID());
@@ -22,11 +23,6 @@ public class Main {
 
         System.out.println(sixthLectures.courseID);
         System.out.println(Lectures.counter);
-
-
-
-
-
 
     }
 }
