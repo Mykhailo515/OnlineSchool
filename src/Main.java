@@ -12,16 +12,15 @@ public class Main {
 //        Lectures fifthLectures = new Lectures();
 
 
-        Course course = new Course();
+        Course course = new Course(2);
         Lectures lectures = new Lectures(course.getID());
         Lectures firstLectures = new Lectures(course.getID());
         Lectures secondLectures = new Lectures(course.getID());
         Lectures thirdLectures = new Lectures(course.getID());
         Lectures fourthLectures = new Lectures(course.getID());
         Lectures fifthLectures = new Lectures(course.getID());
-        Lectures sixthLectures = new Lectures(course.getID());
 
-        System.out.println(sixthLectures.courseID);
+        System.out.println(fifthLectures.courseID);
         System.out.println(Lectures.counter);
 
     }
