@@ -3,16 +3,17 @@ package models;
 public class Lectures {
     private HomeWork homeWork;
     private AddMaterials addMaterials;
-    private static long ID;
+    private long ID;
+    private String name;
+
     public static long counter;
     public int courseID;
 
-    public Lectures(int courseID) {
-        ID = counter++;
+    public Lectures(String name, int courseID) {
         this.courseID = courseID;
+        this.name = name;
+        ID = counter++;
     }
-
-
 }
 
 
