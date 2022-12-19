@@ -1,5 +1,6 @@
 package service;
 
+import models.Course;
 import models.Lectures;
 
 import java.util.Scanner;
@@ -8,7 +9,8 @@ public class MainService {
 
     static Scanner scanner = new Scanner(System.in);
 
-    public static int firstOption() {
+
+    public static int firstChoice() {
         System.out.println("Menu:");
         System.out.println("1. Course");
         System.out.println("2. Teachers");
@@ -17,13 +19,13 @@ public class MainService {
         return scanner.nextInt();
     }
 
-    public static int secondOption() {
+    public static int secondChoice() {
         System.out.println("Select category");
         System.out.println("1. Menu");
         System.out.println("2. Exit");
         int put = scanner.nextInt();
         if (put == 1) {
-            return firstOption();
+            return firstChoice();
         } else if (put == 2) {
             System.out.println("Exit the program!");
             return 0;
@@ -45,11 +47,15 @@ public class MainService {
                 System.out.println("Students");
                 yield 3;
             case 4:
+
                 System.out.println("Enter lecture name:");
                 String lectureName = scanner.next();
-                Lectures lecture = new Lectures("Start education", 2);
+                lectureName = "Education";
+                Lectures lecture = new Lectures(lectureName);
+                Lectures lectures = new Lectures("Test", 3);
+
                 yield 4;
-            default: //Error;
+            default:
                 System.out.println("Create another lecture?");
                 System.out.println("1 - Yes");
                 System.out.println("2 - Exit");
