@@ -88,8 +88,8 @@ public class MainService {
         return i;
     }
 
-    public static int inputArray() {
-        System.out.println("Show all objects from the array?");
+     public static int showArray() {
+        System.out.println("Invoke all objects from the array?");
         System.out.println("1. Yes");
         System.out.println("2. No");
         scanner.nextInt();
@@ -99,7 +99,7 @@ public class MainService {
     public static int showArray(int takeArray) {
         return switch (takeArray) {
             case 1:
-                System.out.println(Arrays.toString(LecturesRepository.getIncreaseArray()));
+                LecturesService.ShowElements();
                 yield 1;
             case 2:
                 yield 2;

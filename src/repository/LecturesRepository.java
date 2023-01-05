@@ -8,7 +8,7 @@ public class LecturesRepository {
     private static final int STANDARD_VALUE_ARRAY = 5;
     private static Lectures[] lectureArray;
     private static int newArray;
-    private static Lectures[] increaseArray;
+    public static Lectures[] increaseArray;
 
 
     public LecturesRepository() {

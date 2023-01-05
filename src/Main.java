@@ -1,6 +1,7 @@
 import models.*;
 import repository.CourseRepository;
 import repository.LecturesRepository;
+import service.LecturesService;
 import service.MainService;
 
 import java.util.Arrays;
@@ -12,9 +13,8 @@ public class Main {
 
 
         int category = MainService.optionCategory(MainService.firstChoice());
-        MainService.secondChoice(); MainService.firstChoice();
-        MainService.showArray(MainService.inputArray());
-
+        MainService.secondChoice();
+        MainService.firstChoice();
 
 
         LecturesRepository lecturesRepository = new LecturesRepository();
@@ -30,10 +30,16 @@ public class Main {
         System.out.println(Arrays.toString(LecturesRepository.getIncreaseArray()));
 
         CourseRepository.addCourse(new Course("First"));
-        LecturesRepository.addNewLecture(new Lectures("First", "Full", 1));
-        LecturesRepository.addNewLecture(new Lectures("Second", "Full", 2));
-        LecturesRepository.addNewLecture(new Lectures("Third", "Full", 3));
+        LecturesRepository.addNewLecture(new Lectures("First", "Full", 11));
+        LecturesRepository.addNewLecture(new Lectures("Second", "Full", 22));
+        LecturesRepository.addNewLecture(new Lectures("Third", "Full", 35));
         System.out.println(Arrays.toString(LecturesRepository.getIncreaseArray()));
         System.out.println(Arrays.toString(CourseRepository.getCourseArray()));
+
+        LecturesService.ShowElements();
+
     }
+
+
+
 }
