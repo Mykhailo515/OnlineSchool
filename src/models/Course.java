@@ -2,6 +2,7 @@ package models;
 
 public class Course {
 
+    private String name;
     private Teachers teachers;
     private Students students;
     private Lectures lectures;
@@ -21,6 +22,16 @@ public class Course {
         return ID;
     }
 
-     }
+    public Course(String name) {
+        this.name = name;
+    }
+
+    @Override
+    public String toString() {
+        return "Course{" +
+                "name='" + name + '\'' +
+                '}';
+    }
+}
 
 

@@ -1,18 +1,39 @@
 import models.*;
+import repository.CourseRepository;
+import repository.LecturesRepository;
 import service.MainService;
+
+import java.util.Arrays;
+
+import static repository.LecturesRepository.*;
 
 public class Main {
     public static void main(String[] args) {
 
-        Course course = new Course(11);
-        Lectures firstLecture = new Lectures("first", 1);
-        Lectures secondLectures = new Lectures("second", 2);
-        Lectures thirdLectures = new Lectures("third", 3);
-        Lectures fourthLectures = new Lectures("fourth", 4);
-        Lectures fifthLectures = new Lectures("fifth", 5);
-        Lectures sixthLectures = new Lectures("sixth", 6);
 
         int category = MainService.optionCategory(MainService.firstChoice());
-        MainService.secondChoice();
+        MainService.secondChoice(); MainService.firstChoice();
+        MainService.showArray(MainService.inputArray());
+
+
+
+        LecturesRepository lecturesRepository = new LecturesRepository();
+        CourseRepository courseRepository = new CourseRepository();
+
+        Lectures firstLecture = new Lectures("first", "Full", 1);
+
+        LecturesRepository.addLecture(firstLecture);
+        System.out.println(Arrays.toString(LecturesRepository.getLectureArray()));
+
+        LecturesRepository.increaseCapacity();
+        System.out.println(LecturesRepository.getNewArray());
+        System.out.println(Arrays.toString(LecturesRepository.getIncreaseArray()));
+
+        CourseRepository.addCourse(new Course("First"));
+        LecturesRepository.addNewLecture(new Lectures("First", "Full", 1));
+        LecturesRepository.addNewLecture(new Lectures("Second", "Full", 2));
+        LecturesRepository.addNewLecture(new Lectures("Third", "Full", 3));
+        System.out.println(Arrays.toString(LecturesRepository.getIncreaseArray()));
+        System.out.println(Arrays.toString(CourseRepository.getCourseArray()));
     }
 }

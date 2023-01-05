@@ -1,8 +1,9 @@
 package service;
 
-import models.Course;
 import models.Lectures;
+import repository.LecturesRepository;
 
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class MainService {
@@ -49,10 +50,12 @@ public class MainService {
             case 4:
 
                 System.out.println("Enter lecture name:");
-                String lectureName = scanner.next();
-                lectureName = "Education";
-                Lectures lecture = new Lectures(lectureName);
-                Lectures lectures = new Lectures("Test", 3);
+                scanner.next();
+                Lectures lecture = new Lectures("Education", "Full", 2);
+                System.out.println(lecture);
+                System.out.println("Total number of lectures = " + Lectures.counter);
+                System.out.println("--------------------------------------");
+
 
                 yield 4;
             default:
@@ -76,13 +79,33 @@ public class MainService {
         int i = 1;
         while (i < 10) {
             System.out.println("Lecture number:" + i);
-            ++i;
+
             if (i == 9) {
                 System.out.println("Exit");
                 break;
             }
         }
         return i;
+    }
+
+    public static int inputArray() {
+        System.out.println("Show all objects from the array?");
+        System.out.println("1. Yes");
+        System.out.println("2. No");
+        scanner.nextInt();
+        return 0;
+    }
+
+    public static int showArray(int takeArray) {
+        return switch (takeArray) {
+            case 1:
+                System.out.println(Arrays.toString(LecturesRepository.getIncreaseArray()));
+                yield 1;
+            case 2:
+                yield 2;
+            default:
+                throw new IllegalStateException("Unexpected value: " + takeArray);
+        };
     }
 }
 
