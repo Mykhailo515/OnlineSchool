@@ -13,8 +13,8 @@ public class Main {
 
 
         int category = MainService.optionCategory(MainService.firstChoice());
-        MainService.secondChoice();
-        MainService.firstChoice();
+        MainService.secondChoice(); MainService.firstChoice();
+        MainService.showArray(MainService.ObjectArray());
 
 
         LecturesRepository lecturesRepository = new LecturesRepository();

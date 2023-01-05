@@ -88,7 +88,7 @@ public class MainService {
         return i;
     }
 
-     public static int showArray() {
+     public static int ObjectArray() {
         System.out.println("Invoke all objects from the array?");
         System.out.println("1. Yes");
         System.out.println("2. No");
