@@ -1,8 +1,10 @@
 package models;
 
 public class Course {
-
+    private int ID;
+    private static long counter;
     private String name;
+
     private Teachers teachers;
     private Students students;
     private Lectures lectures;
@@ -11,8 +13,6 @@ public class Course {
         this.ID = ID;
     }
 
-    private int ID;
-    private static long counter;
 
     public Course() {
         ID++;

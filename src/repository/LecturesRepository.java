@@ -23,13 +23,14 @@ public class LecturesRepository {
 
     public static void addLecture(Lectures o) {
         for (int i = 0; i < lectureArray.length; i++) {
-            if (lectureArray[i] == null) {
+            if (lectureArray[lectureArray.length - 1] != null) {
+                increaseCapacity();
+            } if (lectureArray[i] == null) {
                 lectureArray[i] = o;
                 break;
             }
         }
     }
-
     public static void increaseCapacity() {
         newArray = (STANDARD_VALUE_ARRAY * 3) / 2 + 1;
         increaseArray = new Lectures[newArray];

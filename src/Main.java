@@ -12,15 +12,15 @@ public class Main {
     public static void main(String[] args) {
 
 
-        int category = MainService.optionCategory(MainService.firstChoice());
-        MainService.secondChoice(); MainService.firstChoice();
-        MainService.showArray(MainService.ObjectArray());
+//        int category = MainService.optionCategory(MainService.firstChoice());
+//        MainService.secondChoice(); MainService.firstChoice();
+//        MainService.showArray(MainService.ObjectArray());
 
 
         LecturesRepository lecturesRepository = new LecturesRepository();
         CourseRepository courseRepository = new CourseRepository();
 
-        Lectures firstLecture = new Lectures("first", "Full", 1);
+        Lectures firstLecture = new Lectures(1, "First",3);
 
         LecturesRepository.addLecture(firstLecture);
         System.out.println(Arrays.toString(LecturesRepository.getLectureArray()));
@@ -30,13 +30,13 @@ public class Main {
         System.out.println(Arrays.toString(LecturesRepository.getIncreaseArray()));
 
         CourseRepository.addCourse(new Course("First"));
-        LecturesRepository.addNewLecture(new Lectures("First", "Full", 11));
-        LecturesRepository.addNewLecture(new Lectures("Second", "Full", 22));
-        LecturesRepository.addNewLecture(new Lectures("Third", "Full", 35));
+        LecturesRepository.addNewLecture(new Lectures(2, "Second", 4));
+        LecturesRepository.addNewLecture(new Lectures(3, "Third", 5));
+        LecturesRepository.addNewLecture(new Lectures(4, "Fourth", 6));
         System.out.println(Arrays.toString(LecturesRepository.getIncreaseArray()));
         System.out.println(Arrays.toString(CourseRepository.getCourseArray()));
 
-        LecturesService.ShowElements();
+      //  LecturesService.ShowElements();
 
     }
 

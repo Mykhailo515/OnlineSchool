@@ -5,32 +5,22 @@ public class Lectures {
     private AddMaterials addMaterials;
     private long ID;
     private String name;
-    private String description;
-
 
     public static long counter;
-    public int courseID;
-
-    public String personID;
-
-    public Lectures(String personID) {
-        this.personID = personID;
-    }
+    public static int courseID;
 
     @Override
     public String toString() {
         return "Lectures{" +
                 "name='" + name + '\'' +
-                ", description='" + description + '\'' +
                 ", courseID=" + courseID +
                 '}';
     }
 
-    public Lectures(String name, String description, int courseID) {
-        this.description = description;
-        this.courseID = courseID;
+    public Lectures(long ID, String name, int courseID) {
+        this.ID = ID;
         this.name = name;
-        ID = counter++;
+        this.courseID = courseID;
     }
 
     public long getID() {
@@ -41,7 +31,7 @@ public class Lectures {
         this.ID = ID;
     }
 
-    public int getCourseID() {
+    public static int getCourseID() {
         return courseID;
     }
 
