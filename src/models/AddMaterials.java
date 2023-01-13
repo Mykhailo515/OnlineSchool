@@ -5,4 +5,7 @@ public class AddMaterials {
     private String name;
     private static long counter;
 
+    public AddMaterials(String name) {
+        this.name = name;
+    }
 }
