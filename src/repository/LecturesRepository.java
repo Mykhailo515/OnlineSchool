@@ -5,9 +5,9 @@ import models.Lectures;
 
 public class LecturesRepository {
 
-    private static final int STANDARD_VALUE_ARRAY = 5;
+    private static int STANDARD_VALUE_ARRAY = 5;
     private static Lectures[] lectureArray;
-    private static int newArray;
+    private static int newCapacity;
     public static Lectures[] increaseArray;
 
 
@@ -21,26 +21,30 @@ public class LecturesRepository {
         return "LecturesRepository{}";
     }
 
+
     public static void addLecture(Lectures o) {
+        if (lectureArray[lectureArray.length - 1] != null) {
+            increaseCapacity();
+        }
         for (int i = 0; i < lectureArray.length; i++) {
-            if (lectureArray[lectureArray.length - 1] != null) {
-                increaseCapacity();
-            } if (lectureArray[i] == null) {
+            if (lectureArray[i] == null) {
                 lectureArray[i] = o;
                 break;
             }
         }
     }
+
     public static void increaseCapacity() {
-        newArray = (STANDARD_VALUE_ARRAY * 3) / 2 + 1;
-        increaseArray = new Lectures[newArray];
+        newCapacity = (STANDARD_VALUE_ARRAY * 3) / 2 + 1;
+        increaseArray = new Lectures[newCapacity];
+
+        System.arraycopy(lectureArray, 0, increaseArray, 0, 8);
+
+        lectureArray = increaseArray;
+
     }
 
-    public static Lectures[] getLectureArray() {
-        return lectureArray;
-    }
-
-    public static void addNewLecture(Lectures o) {
+    public static void newArray(Lectures o) {
         for (int i = 0; i < increaseArray.length; i++) {
             if (increaseArray[i] == null) {
                 increaseArray[i] = o;
@@ -49,11 +53,19 @@ public class LecturesRepository {
         }
     }
 
-    public static int getNewArray() {
-        return newArray;
+    public static Lectures[] getLectureArray() {
+        return lectureArray;
     }
 
     public static Lectures[] getIncreaseArray() {
         return increaseArray;
+    }
+
+    public static int getNewCapacity() {
+        return newCapacity;
+    }
+
+    public static void setNewCapacity(int newCapacity) {
+        LecturesRepository.newCapacity = newCapacity;
     }
 }

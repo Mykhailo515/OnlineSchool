@@ -99,7 +99,7 @@ public class MainService {
     public static int showArray(int takeArray) {
         return switch (takeArray) {
             case 1:
-                LecturesService.ShowElements();
+                LecturesService.showElements();
                 yield 1;
             case 2:
                 yield 2;
