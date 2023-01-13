@@ -38,7 +38,7 @@ public class LecturesRepository {
         newCapacity = (STANDARD_VALUE_ARRAY * 3) / 2 + 1;
         increaseArray = new Lectures[newCapacity];
 
-        System.arraycopy(lectureArray, 0, increaseArray, 0, 8);
+        System.arraycopy(lectureArray, 0, increaseArray, 0, STANDARD_VALUE_ARRAY);
 
         lectureArray = increaseArray;
 

@@ -19,10 +19,10 @@ public class Main {
 
         LecturesRepository lecturesRepository = new LecturesRepository();
         CourseRepository courseRepository = new CourseRepository();
-        LecturesRepository lecturesRepository1 = new LecturesRepository();
 
         Lectures firstLecture = new Lectures(1, "First", 3);
 
+        LecturesRepository.increaseCapacity();
         lecturesRepository.addLecture(firstLecture);
         System.out.println(Arrays.toString(LecturesRepository.getLectureArray()));
 
@@ -36,9 +36,9 @@ public class Main {
 
         System.out.println(Arrays.toString(LecturesRepository.getLectureArray()));
         System.out.println(Arrays.toString(LecturesRepository.getIncreaseArray()));
-    //    System.out.println(Arrays.toString(CourseRepository.getCourseArray()));
+        System.out.println(Arrays.toString(CourseRepository.getCourseArray()));
 
-        //LecturesService.showElements();
+        LecturesService.showElements();
 
     }
 }
