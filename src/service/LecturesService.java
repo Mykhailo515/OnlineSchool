@@ -6,7 +6,7 @@ import static repository.LecturesRepository.increaseArray;
 
 public class LecturesService {
 
-    public static void ShowElements() {
+    public static void showElements() {
         for (Lectures lectures : increaseArray) {
             System.out.println(lectures.getCourseID());
         }
