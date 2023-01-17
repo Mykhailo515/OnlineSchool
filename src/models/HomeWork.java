@@ -1,7 +1,7 @@
 package models;
 
-public class HomeWork {
-    private static int ID;
-    private static long counter;
-    private String name;
+public class HomeWork extends SuperClass{
+    public HomeWork(int ID, long counter) {
+        super(ID, counter);
+    }
 }

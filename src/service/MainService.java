@@ -1,6 +1,7 @@
 package service;
 
 import models.Lectures;
+import models.SuperClass;
 import repository.LecturesRepository;
 
 import java.util.Arrays;
@@ -51,9 +52,9 @@ public class MainService {
 
                 System.out.println("Enter lecture name:");
                 scanner.next();
-                Lectures lecture = new Lectures(11, "Full", 12);
+                Lectures lecture = new Lectures(11, 11);
                 System.out.println(lecture);
-                System.out.println("Total number of lectures = " + Lectures.counter);
+                System.out.println("Total number of lectures = " + lecture.getCounter());
                 System.out.println("--------------------------------------");
 
 
@@ -88,7 +89,7 @@ public class MainService {
         return i;
     }
 
-     public static int ObjectArray() {
+    public static int ObjectArray() {
         System.out.println("Invoke all objects from the array?");
         System.out.println("1. Yes");
         System.out.println("2. No");

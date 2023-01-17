@@ -1,6 +1,8 @@
 package models;
 
-public class Teachers {
-    private static int ID;
-    private static long counter;
+public class Teachers extends SuperClass {
+
+    public Teachers(int ID, long counter) {
+        super(ID, counter);
+    }
 }
