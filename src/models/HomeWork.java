@@ -1,7 +1,7 @@
 package models;
 
 public class HomeWork extends SuperClass{
-    public HomeWork(int ID, long counter) {
+    public HomeWork(int ID, int counter) {
         super(ID, counter);
     }
 }

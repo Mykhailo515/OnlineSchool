@@ -2,8 +2,9 @@ package repository;
 
 import models.Course;
 import models.Lectures;
+import models.SuperClass;
 
-public class LecturesRepository {
+public class LecturesRepository extends SuperRepository{
 
     private static int STANDARD_VALUE_ARRAY = 5;
     private static Lectures[] lectureArray;
@@ -67,5 +68,25 @@ public class LecturesRepository {
 
     public static void setNewCapacity(int newCapacity) {
         LecturesRepository.newCapacity = newCapacity;
+    }
+
+    @Override
+    public SuperClass[] getALL() {
+        return super.getALL();
+    }
+
+    @Override
+    public void add(SuperClass increase) {
+        super.add(increase);
+    }
+
+    @Override
+    public void getByID(int ID) {
+        super.getByID(ID);
+    }
+
+    @Override
+    public void deleteByID(int ID) {
+        super.deleteByID(ID);
     }
 }

@@ -8,7 +8,7 @@ public class LecturesService {
 
     public static void showElements() {
         for (Lectures lectures : increaseArray) {
-            System.out.println(lectures.getCourseID());
+            System.out.println(lectures.getID());
         }
     }
 }
