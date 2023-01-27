@@ -6,8 +6,8 @@ public class Course extends SuperClass{
     private Lectures lectures;
 
 
-    public Course(int ID, int counter) {
-        super(ID, counter);
+    public Course(int ID) {
+        super(ID);
     }
 }
 

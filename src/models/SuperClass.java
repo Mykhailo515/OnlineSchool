@@ -2,11 +2,9 @@ package models;
 
 public class SuperClass {
     private int ID;
-    private int counter;
 
-    public SuperClass(int ID, int counter) {
+    public SuperClass(int ID) {
         this.ID = ID;
-        this.counter = (int) counter;
 
     }
 
@@ -18,11 +16,10 @@ public class SuperClass {
         this.ID = ID;
     }
 
-    public int getCounter() {
-        return counter;
-    }
-
-    public void setCounter(int counter) {
-        this.counter = counter;
+    @Override
+    public String toString() {
+        return "SuperClass{" +
+                "ID=" + ID +
+                '}';
     }
 }

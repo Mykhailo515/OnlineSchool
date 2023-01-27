@@ -20,7 +20,7 @@ public class Main {
         LecturesRepository lecturesRepository = new LecturesRepository();
         CourseRepository courseRepository = new CourseRepository();
 
-        Lectures firstLecture = new Lectures(1, 1);
+        Lectures firstLecture = new Lectures(1, 1,1);
 
         LecturesRepository.increaseCapacity();
         addLecture(firstLecture);
@@ -29,19 +29,21 @@ public class Main {
         System.out.println(LecturesRepository.getNewCapacity());
         System.out.println(Arrays.toString(LecturesRepository.getIncreaseArray()));
 
-        CourseRepository.addCourse(new Course(1, 1));
-        LecturesRepository.addLecture(new Lectures(2, 2));
-        LecturesRepository.addLecture(new Lectures(3, 3));
-        LecturesRepository.addLecture(new Lectures(4, 4));
+        LecturesRepository.addLecture(new Lectures(2,2,2));
+        LecturesRepository.addLecture(new Lectures(3, 3,3));
+        LecturesRepository.addLecture(new Lectures(4, 4,4));
 
         System.out.println(Arrays.toString(LecturesRepository.getIncreaseArray()));
         System.out.println(Arrays.toString(CourseRepository.getCourseArray()));
 
-        LecturesService.showElements();
+  //      LecturesService.showElements();
 
 
         SuperRepository superRepository = new SuperRepository();
-        superRepository.add(new Lectures(2,3));
+        superRepository.add(new Lectures(5,5,5));
+
+        Person firstTeacher = new Person(1,2,Role.TEACHER);
+        System.out.println(firstTeacher);
 
     }
 
