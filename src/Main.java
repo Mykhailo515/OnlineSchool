@@ -2,8 +2,6 @@ import models.*;
 import repository.CourseRepository;
 import repository.LecturesRepository;
 import repository.SuperRepository;
-import service.LecturesService;
-import service.MainService;
 
 import java.util.Arrays;
 
@@ -20,7 +18,7 @@ public class Main {
         LecturesRepository lecturesRepository = new LecturesRepository();
         CourseRepository courseRepository = new CourseRepository();
 
-        Lectures firstLecture = new Lectures(1, 1,1);
+        Lecture firstLecture = new Lecture(1, 1,1);
 
         LecturesRepository.increaseCapacity();
         addLecture(firstLecture);
@@ -29,9 +27,9 @@ public class Main {
         System.out.println(LecturesRepository.getNewCapacity());
         System.out.println(Arrays.toString(LecturesRepository.getIncreaseArray()));
 
-        LecturesRepository.addLecture(new Lectures(2,2,2));
-        LecturesRepository.addLecture(new Lectures(3, 3,3));
-        LecturesRepository.addLecture(new Lectures(4, 4,4));
+        LecturesRepository.addLecture(new Lecture(2,2,2));
+        LecturesRepository.addLecture(new Lecture(3, 3,3));
+        LecturesRepository.addLecture(new Lecture(4, 4,4));
 
         System.out.println(Arrays.toString(LecturesRepository.getIncreaseArray()));
         System.out.println(Arrays.toString(CourseRepository.getCourseArray()));
@@ -40,7 +38,7 @@ public class Main {
 
 
         SuperRepository superRepository = new SuperRepository();
-        superRepository.add(new Lectures(5,5,5));
+        superRepository.add(new Lecture(5,5,5));
 
         Person firstTeacher = new Person(1,2,Role.TEACHER);
         System.out.println(firstTeacher);

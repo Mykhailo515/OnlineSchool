@@ -1,13 +1,13 @@
 package service;
 
-import models.Lectures;
+import models.Lecture;
 
 import static repository.LecturesRepository.increaseArray;
 
-public class LecturesService {
+public class LectureService {
 
     public static void showElements() {
-        for (Lectures lectures : increaseArray) {
+        for (Lecture lectures : increaseArray) {
             System.out.println(lectures.getID());
         }
     }
