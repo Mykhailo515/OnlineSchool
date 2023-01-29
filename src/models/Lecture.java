@@ -13,7 +13,7 @@ public class Lecture extends SuperClass {
         super(ID);
         this.courseID = courseID;
         this.personID = personID;
-        counterLecture++;
+        ID = counterLecture++;
     }
 
     @Override
