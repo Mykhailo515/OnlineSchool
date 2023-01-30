@@ -11,7 +11,7 @@ public class Person extends SuperClass {
     public Person(int ID, int courseID, Role role) {
         super(ID);
         this.courseID = courseID;
-    //    this.role = role;
+        this.role = role;
         counter++;
 
     }
