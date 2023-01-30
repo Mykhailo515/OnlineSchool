@@ -3,7 +3,7 @@ package models;
 import static models.Role.TEACHER;
 
 public class Person extends SuperClass {
-    private final int courseID;
+    private static int courseID;
     private static int counter = 0;
     private final Role role = TEACHER;
 
@@ -15,10 +15,11 @@ public class Person extends SuperClass {
         counter++;
 
     }
-    public static Person creatTeacher(int ID, int courseID, Role role){
-        Person teacher = new Person(ID, courseID, TEACHER);
-        return teacher;
+
+    public Person(int id) {
+        super(id);
     }
+
 
     @Override
     public String toString() {
