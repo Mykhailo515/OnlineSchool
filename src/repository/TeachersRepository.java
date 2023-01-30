@@ -1,4 +1,4 @@
 package repository;
 
-public class TeachersRepository {
+public class TeachersRepository extends SuperRepository{
 }

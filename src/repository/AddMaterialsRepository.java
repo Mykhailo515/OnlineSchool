@@ -1,4 +1,4 @@
 package repository;
 
-public class AddMaterialsRepository {
+public class AddMaterialsRepository extends SuperRepository {
 }

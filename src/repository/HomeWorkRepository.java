@@ -1,4 +1,4 @@
 package repository;
 
-public class HomeWorkRepository {
+public class HomeWorkRepository extends SuperRepository{
 }
