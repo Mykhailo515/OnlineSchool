@@ -49,7 +49,7 @@ public class Main {
                 "phone", "email");
         System.out.println(firstTeacher);
 
-        LectureService.dialogCreateTeacher();
+        LectureService.сreateTeacher();
         System.out.println();
 
     //    PersonService.checkDate();

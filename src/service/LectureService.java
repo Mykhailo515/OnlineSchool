@@ -23,7 +23,7 @@ public class LectureService {
         }
     }
     static Scanner scanner = new Scanner(System.in);
-    public static void dialogCreateTeacher() {
+    public static void сreateTeacher() {
         System.out.println("Create teacher?");
         System.out.println("1 Yes");
         System.out.println("1 No");
