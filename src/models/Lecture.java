@@ -1,8 +1,6 @@
 package models;
 
 public class Lecture extends SuperClass {
-    private HomeWork homeWork;
-    private AddMaterial addMaterials;
     private long counterLecture;
     private int courseId;
     private int personId;

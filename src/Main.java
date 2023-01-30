@@ -15,11 +15,6 @@ import static repository.LecturesRepository.*;
 public class Main {
     public static void main(String[] args) {
 
-//        int category = MainService.optionCategory(MainService.firstChoice());
-//        MainService.secondChoice(); MainService.firstChoice();
-//        MainService.showArray(MainService.ObjectArray());
-
-
         LecturesRepository lecturesRepository = new LecturesRepository();
         CourseRepository courseRepository = new CourseRepository();
 
@@ -39,8 +34,6 @@ public class Main {
         System.out.println(Arrays.toString(LecturesRepository.getIncreaseArray()));
         System.out.println(Arrays.toString(CourseRepository.getCourseArray()));
 
-        //    LectureService.showElements();
-
 
         SuperRepository superRepository = new SuperRepository();
         superRepository.add(new Lecture(5, 5, 5, "fifth", "full"));
@@ -51,8 +44,6 @@ public class Main {
 
         LectureService.сreateTeacher();
         System.out.println();
-
-    //    PersonService.checkDate();
 
     }
 

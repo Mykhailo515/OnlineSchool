@@ -1,7 +1,7 @@
 package models;
 
 public class Teacher extends SuperClass {
-    public static int counterTeacher;
+    private static int counterTeacher;
 
     public Teacher(int ID, int counter) {
 
