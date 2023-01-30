@@ -19,7 +19,7 @@ public class LectureService {
 
     public static void showElements() {
         for (Lecture lecture : increaseArray) {
-            System.out.println(lecture.getID());
+            System.out.println(lecture.getId());
         }
     }
     static Scanner scanner = new Scanner(System.in);
@@ -37,7 +37,7 @@ public class LectureService {
 
                 break;
             case 1:
-                System.out.println("Enter ID teacher");
+                System.out.println("Enter id teacher");
                 int teacherId = scanner.nextInt();
                 Person teacher = PersonService.createLimitTeacher(teacherId);
                 REPOSITORY_PERSON.add(teacher);

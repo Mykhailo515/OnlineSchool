@@ -3,8 +3,12 @@ import repository.CourseRepository;
 import repository.LecturesRepository;
 import repository.SuperRepository;
 import service.LectureService;
+import service.PersonService;
 
 import java.util.Arrays;
+import java.util.Scanner;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 import static repository.LecturesRepository.*;
 
@@ -35,7 +39,7 @@ public class Main {
         System.out.println(Arrays.toString(LecturesRepository.getIncreaseArray()));
         System.out.println(Arrays.toString(CourseRepository.getCourseArray()));
 
-        LectureService.showElements();
+        //    LectureService.showElements();
 
 
         SuperRepository superRepository = new SuperRepository();
@@ -47,6 +51,8 @@ public class Main {
 
         LectureService.dialogCreateTeacher();
         System.out.println();
+
+    //    PersonService.checkDate();
 
     }
 

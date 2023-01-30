@@ -3,18 +3,18 @@ package models;
 import static models.Role.TEACHER;
 
 public class Person extends SuperClass {
-    private int courseID;
+    private int courseId;
     private static int counter = 0;
     private Role role;
     private String lastname = "Jordan";
     private String firstname = "Michael";
-    private String phone = "+12689990175";
+    private String phone = "+1268-999-01-75";
     private String email = "jordan.air@com.usa";
 
 
-    public Person(int ID, int courseID, Role role, String lastname, String firstname, String phone, String email) {
-        super(ID);
-        this.courseID = courseID;
+    public Person(int id, int courseID, Role role, String lastname, String firstname, String phone, String email) {
+        super(id);
+        this.courseId = courseId;
         this.role = role;
         this.lastname = lastname;
         this.firstname = firstname;
@@ -31,7 +31,7 @@ public class Person extends SuperClass {
     @Override
     public String toString() {
         return "Person{" +
-                "courseID=" + courseID +
+                "courseId=" + courseId +
                 ", role=" + role +
                 ", lastname='" + lastname + '\'' +
                 ", firstname='" + firstname + '\'' +

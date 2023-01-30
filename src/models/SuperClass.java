@@ -1,25 +1,25 @@
 package models;
 
 public class SuperClass {
-    private int ID;
+    private int id;
 
-    public SuperClass(int ID) {
-        this.ID = ID;
+    public SuperClass(int id) {
+        this.id = id;
 
     }
 
-    public int getID() {
-        return ID;
+    public int getId() {
+        return id;
     }
 
-    public void setID(int ID) {
-        this.ID = ID;
+    public void setId(int id) {
+        this.id = id;
     }
 
     @Override
     public String toString() {
         return "SuperClass{" +
-                "ID=" + ID +
+                "id=" + id +
                 '}';
     }
 }

@@ -4,15 +4,15 @@ public class Lecture extends SuperClass {
     private HomeWork homeWork;
     private AddMaterial addMaterials;
     private long counterLecture;
-    private int courseID;
-    private int personID;
+    private int courseId;
+    private int personId;
     private String name;
     private String description;
 
-    public Lecture(int ID, int courseID, int personID, String name, String description) {
-        super(ID);
-        this.courseID = courseID;
-        this.personID = personID;
+    public Lecture(int id, int courseId, int personId, String name, String description) {
+        super(id);
+        this.courseId = courseId;
+        this.personId = personId;
         this.name = name;
         this.description = description;
         counterLecture++;
@@ -22,8 +22,8 @@ public class Lecture extends SuperClass {
     public String toString() {
         return "Lecture{" +
                 ", counterLecture=" + counterLecture +
-                ", courseID=" + courseID +
-                ", personID=" + personID +
+                ", courseId=" + courseId +
+                ", personId=" + personId +
                 ", name='" + name + '\'' +
                 ", description='" + description + '\'' +
                 '}';
