@@ -4,10 +4,10 @@ public class Lecture extends SuperClass {
     private HomeWork homeWork;
     private AddMaterial addMaterials;
     private long counterLecture;
-    private String name;
     private int courseID;
-
     private int personID;
+    private String name;
+    private String description;
 
     public Lecture(int ID, int courseID, int personID) {
         super(ID);
@@ -19,7 +19,6 @@ public class Lecture extends SuperClass {
     @Override
     public String toString() {
         return "Lectures{" +
-                "name='" + name + '\'' +
                 ", courseID=" + courseID +
                 ", personID=" + personID +
                 '}';
