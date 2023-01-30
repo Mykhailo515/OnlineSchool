@@ -36,7 +36,7 @@ public class LectureService {
 
                 break;
             case 1:
-                System.out.println("Enter ID teacher!");
+                System.out.println("Enter ID teacher");
                 int teacherId = scanner.nextInt();
                 Person teacher = PersonService.createLimitTeacher(teacherId);
                 REPOSITORY_PERSON.add(teacher);
