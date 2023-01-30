@@ -2,6 +2,7 @@ import models.*;
 import repository.CourseRepository;
 import repository.LecturesRepository;
 import repository.SuperRepository;
+import service.LectureService;
 
 import java.util.Arrays;
 
@@ -43,6 +44,10 @@ public class Main {
         Person firstTeacher = new Person(1,2,Role.TEACHER);
         System.out.println(firstTeacher);
 
+        LectureService.dialogCreateTeacher();
+        System.out.println();
+
     }
+
 
 }

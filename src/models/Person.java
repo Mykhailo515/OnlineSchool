@@ -3,9 +3,9 @@ package models;
 import static models.Role.TEACHER;
 
 public class Person extends SuperClass {
-    private static int courseID;
+    private int courseID;
     private static int counter = 0;
-    private final Role role = TEACHER;
+    private Role role;
 
 
     public Person(int ID, int courseID, Role role) {
