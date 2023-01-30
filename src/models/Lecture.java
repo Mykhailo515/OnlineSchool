@@ -3,7 +3,7 @@ package models;
 public class Lecture extends SuperClass {
     private HomeWork homeWork;
     private AddMaterial addMaterials;
-    private int counterLecture;
+    private long counterLecture;
     private String name;
     private int courseID;
 
@@ -13,7 +13,7 @@ public class Lecture extends SuperClass {
         super(ID);
         this.courseID = courseID;
         this.personID = personID;
-        ID = counterLecture++;
+        counterLecture++;
     }
 
     @Override

@@ -51,7 +51,7 @@ public class MainService {
                 scanner.next();
                 Lecture lecture = new Lecture(1,2,2);
                 System.out.println(lecture);
-                System.out.println("Total number of lectures = " + Lecture);
+                System.out.println("Total number of lectures = " + lecture);
                 System.out.println("--------------------------------------");
 
 
