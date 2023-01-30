@@ -49,9 +49,9 @@ public class MainService {
 
                 System.out.println("Enter lecture name:");
                 scanner.next();
-                Lecture lecture = new Lecture(1,2,2);
+                Lecture lecture = new Lecture(11,22,22,"another","full");
                 System.out.println(lecture);
-                System.out.println("Total number of lectures = " + lecture);
+                System.out.println("Total number of lectures = " + Lecture);
                 System.out.println("--------------------------------------");
 
 

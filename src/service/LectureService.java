@@ -13,12 +13,13 @@ import static repository.LecturesRepository.increaseArray;
 
 public class LectureService {
 
+
     private final static PersonRepository REPOSITORY_PERSON
             = new PersonRepository();
 
     public static void showElements() {
-        for (Lecture lectures : increaseArray) {
-            System.out.println(lectures.getID());
+        for (Lecture lecture : increaseArray) {
+            System.out.println(lecture.getID());
         }
     }
     static Scanner scanner = new Scanner(System.in);

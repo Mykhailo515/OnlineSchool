@@ -9,18 +9,23 @@ public class Lecture extends SuperClass {
     private String name;
     private String description;
 
-    public Lecture(int ID, int courseID, int personID) {
+    public Lecture(int ID, int courseID, int personID, String name, String description) {
         super(ID);
         this.courseID = courseID;
         this.personID = personID;
+        this.name = name;
+        this.description = description;
         counterLecture++;
     }
 
     @Override
     public String toString() {
-        return "Lectures{" +
+        return "Lecture{" +
+                ", counterLecture=" + counterLecture +
                 ", courseID=" + courseID +
                 ", personID=" + personID +
+                ", name='" + name + '\'' +
+                ", description='" + description + '\'' +
                 '}';
     }
 }
