@@ -6,7 +6,7 @@ import repository.PersonRepository;
 
 import java.util.Scanner;
 
-import static repository.LecturesRepository.increaseArray;
+import static repository.LectureRepository.increaseArray;
 
 
 

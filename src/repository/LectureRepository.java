@@ -3,7 +3,7 @@ package repository;
 import models.Lecture;
 import models.SuperClass;
 
-public class LecturesRepository extends SuperRepository{
+public class LectureRepository extends SuperRepository{
 
     private static int STANDARD_VALUE_ARRAY = 5;
     private static Lecture[] lectureArray;
@@ -11,7 +11,7 @@ public class LecturesRepository extends SuperRepository{
     public static Lecture[] increaseArray;
 
 
-    public LecturesRepository() {
+    public LectureRepository() {
 
         this.lectureArray = new Lecture[STANDARD_VALUE_ARRAY];
     }
@@ -66,7 +66,7 @@ public class LecturesRepository extends SuperRepository{
     }
 
     public static void setNewCapacity(int newCapacity) {
-        LecturesRepository.newCapacity = newCapacity;
+        LectureRepository.newCapacity = newCapacity;
     }
 
     @Override
