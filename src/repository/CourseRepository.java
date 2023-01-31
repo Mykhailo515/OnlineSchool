@@ -4,7 +4,7 @@ import models.Course;
 
 import java.util.Arrays;
 
-public class CourseRepository {
+public class CourseRepository extends SuperRepository{
     private static Course[] courseArray;
     private static final int STANDARD_VALUE_ARRAY = 5;
 

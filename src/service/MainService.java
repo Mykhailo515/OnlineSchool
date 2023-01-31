@@ -1,10 +1,7 @@
 package service;
 
-import models.Lectures;
-import models.SuperClass;
-import repository.LecturesRepository;
+import models.Lecture;
 
-import java.util.Arrays;
 import java.util.Scanner;
 
 public class MainService {
@@ -52,9 +49,9 @@ public class MainService {
 
                 System.out.println("Enter lecture name:");
                 scanner.next();
-                Lectures lecture = new Lectures(11, 11);
+                Lecture lecture = new Lecture(11, 22, 22, "another", "full");
                 System.out.println(lecture);
-                System.out.println("Total number of lectures = " + lecture.getCounter());
+                System.out.println("Total number of lectures = " + lecture);
                 System.out.println("--------------------------------------");
 
 
@@ -100,7 +97,7 @@ public class MainService {
     public static int showArray(int takeArray) {
         return switch (takeArray) {
             case 1:
-                LecturesService.showElements();
+                LectureService.showElements();
                 yield 1;
             case 2:
                 yield 2;

@@ -1,20 +1,19 @@
 package repository;
 
-import models.Course;
-import models.Lectures;
+import models.Lecture;
 import models.SuperClass;
 
-public class LecturesRepository extends SuperRepository{
+public class LectureRepository extends SuperRepository{
 
     private static int STANDARD_VALUE_ARRAY = 5;
-    private static Lectures[] lectureArray;
+    private static Lecture[] lectureArray;
     private static int newCapacity;
-    public static Lectures[] increaseArray;
+    public static Lecture[] increaseArray;
 
 
-    public LecturesRepository() {
+    public LectureRepository() {
 
-        this.lectureArray = new Lectures[STANDARD_VALUE_ARRAY];
+        this.lectureArray = new Lecture[STANDARD_VALUE_ARRAY];
     }
 
     @Override
@@ -23,7 +22,7 @@ public class LecturesRepository extends SuperRepository{
     }
 
 
-    public static void addLecture(Lectures o) {
+    public static void addLecture(Lecture o) {
         if (lectureArray[lectureArray.length - 1] != null) {
             increaseCapacity();
         }
@@ -37,7 +36,7 @@ public class LecturesRepository extends SuperRepository{
 
     public static void increaseCapacity() {
         newCapacity = (STANDARD_VALUE_ARRAY * 3) / 2 + 1;
-        increaseArray = new Lectures[newCapacity];
+        increaseArray = new Lecture[newCapacity];
 
         System.arraycopy(lectureArray, 0, increaseArray, 0, STANDARD_VALUE_ARRAY);
 
@@ -45,7 +44,7 @@ public class LecturesRepository extends SuperRepository{
 
     }
 
-    public static void newArray(Lectures o) {
+    public static void newArray(Lecture o) {
         for (int i = 0; i < increaseArray.length; i++) {
             if (increaseArray[i] == null) {
                 increaseArray[i] = o;
@@ -54,11 +53,11 @@ public class LecturesRepository extends SuperRepository{
         }
     }
 
-    public static Lectures[] getLectureArray() {
+    public static Lecture[] getLectureArray() {
         return lectureArray;
     }
 
-    public static Lectures[] getIncreaseArray() {
+    public static Lecture[] getIncreaseArray() {
         return increaseArray;
     }
 
@@ -67,7 +66,7 @@ public class LecturesRepository extends SuperRepository{
     }
 
     public static void setNewCapacity(int newCapacity) {
-        LecturesRepository.newCapacity = newCapacity;
+        LectureRepository.newCapacity = newCapacity;
     }
 
     @Override

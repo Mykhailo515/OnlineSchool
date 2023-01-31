@@ -21,11 +21,11 @@ public class SuperRepository {
         }
     }
 
-    //метод перебирає кожен ID
-    public void getByID(int ID) {
+    //метод перебирає кожен id
+    public void getByID(int id) {
         for (SuperClass openLecture : arrayRepository) {
             if (openLecture != null) {
-                if (ID == openLecture.getID()) {
+                if (id == openLecture.getId()) {
                     System.out.println(openLecture);
                 }
             }
@@ -33,10 +33,10 @@ public class SuperRepository {
     }
 
     //метод видаляє ID
-    public void deleteByID(int ID) {
+    public void deleteByID(int id) {
         for (int i = 0; i < arrayRepository.length; i++) {
             if (arrayRepository[i] != null) {
-                if (ID == arrayRepository[i].getID()) {
+                if (id == arrayRepository[i].getId()) {
                     arrayRepository[i] = null;
                 }
             }

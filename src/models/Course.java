@@ -1,13 +1,11 @@
 package models;
 
-public class Course extends SuperClass{
-    private Teachers teachers;
-    private Students students;
-    private Lectures lectures;
+public class Course extends SuperClass {
+    private static int counterCourse;
 
-
-    public Course(int ID, int counter) {
-        super(ID, counter);
+    public Course(int id) {
+        super(id);
+        counterCourse++;
     }
 }
 
