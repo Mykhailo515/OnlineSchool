@@ -8,11 +8,7 @@ import java.util.Scanner;
 
 import static repository.LectureRepository.increaseArray;
 
-
-
-
 public class LectureService {
-
 
     private final static PersonRepository REPOSITORY_PERSON
             = new PersonRepository();

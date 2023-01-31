@@ -34,7 +34,7 @@ public class LectureRepository extends SuperRepository{
         }
     }
 
-    public static void increaseCapacity() {
+    private static void increaseCapacity() {
         newCapacity = (STANDARD_VALUE_ARRAY * 3) / 2 + 1;
         increaseArray = new Lecture[newCapacity];
 

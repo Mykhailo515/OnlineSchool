@@ -11,12 +11,8 @@ import static repository.LectureRepository.*;
 public class Main {
     public static void main(String[] args) {
 
-        LectureRepository lecturesRepository = new LectureRepository();
-        CourseRepository courseRepository = new CourseRepository();
-
         Lecture firstLecture = new Lecture(1, 1, 1, "first", "full");
 
-        LectureRepository.increaseCapacity();
         addLecture(firstLecture);
         System.out.println(Arrays.toString(LectureRepository.getLectureArray()));
 
