@@ -24,17 +24,14 @@ public class LectureRepository extends SuperRepository {
     }
 
 
-    public static void addLecture() {
+    public static void addLecture(Lecture o) {
+        if (lectureArray[lectureArray.length - 1] != null) {
+            increaseCapacity();
+        }
         for (int i = 0; i < lectureArray.length; i++) {
-            fullOF = 0;
-            fullOF = i;
-            if (lectureArray[i] != null) {
-                fullOF++;
-                if (fullOF == lectureArray.length) {
-                    System.out.println("Кількість заповнених елементів " + fullOF);
-                    increaseCapacity();
-                    break;
-                }
+            if (lectureArray[i] == null) {
+                lectureArray[i] = o;
+                break;
             }
         }
     }

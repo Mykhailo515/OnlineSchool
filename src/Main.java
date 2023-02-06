@@ -25,8 +25,6 @@ public class Main {
 
         System.out.println(Arrays.toString(LectureRepository.getIncreaseArray()));
         System.out.println(Arrays.toString(CourseRepository.getCourseArray()));
-        LectureRepository.addLecture();
-
 
         SuperRepository superRepository = new SuperRepository();
         superRepository.add(new Lecture(5, 5, 5, "fifth", "full"));

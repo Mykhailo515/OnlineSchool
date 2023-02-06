@@ -5,30 +5,32 @@ import models.SuperClass;
 
 public class GenericRepository<E extends SuperClass> {
 
+    private static int VALUE_ARRAY = 5;
 
     private static int newSize;
-    private SuperClass[] arraySuperclass;
-//    public void addSuperclass(Lecture o) {
-//        if (arraySuperclass[arraySuperclass.length - 1] != null) {
-//            increaseCapacity();
-//        }
-//        for (int i = 0; i < arraySuperclass.length; i++) {
-//            if (arraySuperclass[i] == null) {
-//                arraySuperclass[i] = o;
-//                break;
-//            }
-//        }
-//    }
+    private static SuperClass[] arraySuperclass;
 
-//    public static void increaseCapacity() {
-//        newSize = (STANDARD_VALUE_ARRAY * 3) / 2 + 1;
-//        increaseArray = new Lecture[newCapacity];
-//
-//        System.arraycopy(lectureArray, 0, increaseArray, 0, lectureArray.length);
-//
-//        lectureArray = increaseArray;
-//
-//    }
+    private static SuperClass[] increaseArray;
+
+    public static void addLecture(Lecture o) {
+
+        for (int i = 0; i < arraySuperclass.length; i++) {
+            if (arraySuperclass[i] == null) {
+                arraySuperclass[i] = o;
+                increaseCapacity();
+                break;
+            }
+        }
+    }
+
+    private static void increaseCapacity() {
+        newSize = (VALUE_ARRAY * 3) / 2 + 1;
+        increaseArray = new Lecture[newSize];
+
+        System.arraycopy(arraySuperclass, 0, increaseArray, 0, VALUE_ARRAY);
+        arraySuperclass = increaseArray;
+
+    }
 
 
     public int size() {
