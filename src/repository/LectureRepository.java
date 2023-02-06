@@ -9,6 +9,7 @@ public class LectureRepository extends SuperRepository {
     private static Lecture[] lectureArray;
     private static int newCapacity;
     public static Lecture[] increaseArray;
+    private static int fullOF = 0;
 
 
     public LectureRepository() {
@@ -23,24 +24,26 @@ public class LectureRepository extends SuperRepository {
     }
 
 
-    public static void addLecture(Lecture o) {
-        if (lectureArray[lectureArray.length - 1] != null) {
-            increaseCapacity();
-        }
+    public static void addLecture() {
         for (int i = 0; i < lectureArray.length; i++) {
-            if (lectureArray[i] == null) {
-                lectureArray[i] = o;
-                break;
+            fullOF = 0;
+            fullOF = i;
+            if (lectureArray[i] != null) {
+                fullOF++;
+                if (fullOF == lectureArray.length) {
+                    System.out.println("Кількість заповнених елементів " + fullOF);
+                    increaseCapacity();
+                    break;
+                }
             }
         }
     }
 
-    public static void increaseCapacity() {
+    private static void increaseCapacity() {
         newCapacity = (STANDARD_VALUE_ARRAY * 3) / 2 + 1;
         increaseArray = new Lecture[newCapacity];
 
-        System.arraycopy(lectureArray, 0, increaseArray, 0, lectureArray.length);
-
+        System.arraycopy(lectureArray, 0, increaseArray, 0, STANDARD_VALUE_ARRAY);
         lectureArray = increaseArray;
 
     }
