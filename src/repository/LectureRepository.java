@@ -3,7 +3,7 @@ package repository;
 import models.Lecture;
 import models.SuperClass;
 
-public class LectureRepository extends SuperRepository{
+public class LectureRepository extends SuperRepository {
 
     private static int STANDARD_VALUE_ARRAY = 5;
     private static Lecture[] lectureArray;
@@ -15,6 +15,7 @@ public class LectureRepository extends SuperRepository{
 
         this.lectureArray = new Lecture[STANDARD_VALUE_ARRAY];
     }
+
 
     @Override
     public String toString() {
@@ -34,11 +35,11 @@ public class LectureRepository extends SuperRepository{
         }
     }
 
-    private static void increaseCapacity() {
+    public static void increaseCapacity() {
         newCapacity = (STANDARD_VALUE_ARRAY * 3) / 2 + 1;
         increaseArray = new Lecture[newCapacity];
 
-        System.arraycopy(lectureArray, 0, increaseArray, 0, STANDARD_VALUE_ARRAY);
+        System.arraycopy(lectureArray, 0, increaseArray, 0, lectureArray.length);
 
         lectureArray = increaseArray;
 
@@ -59,14 +60,6 @@ public class LectureRepository extends SuperRepository{
 
     public static Lecture[] getIncreaseArray() {
         return increaseArray;
-    }
-
-    public static int getNewCapacity() {
-        return newCapacity;
-    }
-
-    public static void setNewCapacity(int newCapacity) {
-        LectureRepository.newCapacity = newCapacity;
     }
 
     @Override
