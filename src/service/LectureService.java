@@ -6,6 +6,7 @@ import repository.PersonRepository;
 
 import java.util.Scanner;
 
+import static repository.LectureRepository.getLectureArray;
 import static repository.LectureRepository.increaseArray;
 
 public class LectureService {
@@ -14,6 +15,13 @@ public class LectureService {
             = new PersonRepository();
 
     public static void showElements() {
+        for (Lecture elements : getLectureArray()) {
+            System.out.println(elements);
+        }
+    }
+
+
+    public static void showIdElements() {
         for (Lecture lecture : increaseArray) {
             System.out.println(lecture.getId());
         }

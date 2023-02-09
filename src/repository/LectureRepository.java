@@ -9,8 +9,6 @@ public class LectureRepository extends SuperRepository {
     private static Lecture[] lectureArray;
     private static int newCapacity;
     public static Lecture[] increaseArray;
-    private static int fullOF = 0;
-
 
     public LectureRepository() {
 
@@ -31,6 +29,7 @@ public class LectureRepository extends SuperRepository {
         for (int i = 0; i < lectureArray.length; i++) {
             if (lectureArray[i] == null) {
                 lectureArray[i] = o;
+                increaseCapacity();
                 break;
             }
         }
@@ -44,6 +43,7 @@ public class LectureRepository extends SuperRepository {
         lectureArray = increaseArray;
 
     }
+
 
     public static void newArray(Lecture o) {
         for (int i = 0; i < increaseArray.length; i++) {

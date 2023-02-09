@@ -12,6 +12,11 @@ public class GenericRepository<E extends SuperClass> {
 
     private static SuperClass[] increaseArray;
 
+    public GenericRepository() {
+        this.arraySuperclass = new SuperClass[VALUE_ARRAY];
+        this.increaseArray = new SuperClass[newSize];
+    }
+
     public static void addLecture(Lecture o) {
 
         for (int i = 0; i < arraySuperclass.length; i++) {
@@ -22,6 +27,7 @@ public class GenericRepository<E extends SuperClass> {
             }
         }
     }
+
 
     private static void increaseCapacity() {
         newSize = (VALUE_ARRAY * 3) / 2 + 1;
@@ -57,30 +63,31 @@ public class GenericRepository<E extends SuperClass> {
 
     public void add(E addIn) {
         for (int i = 0; i < arraySuperclass.length; i++) {
-            if (arraySuperclass[i] == null) {
-                arraySuperclass[i] = (E) addIn;
-                break;
-            }
-        }
-    }
-
-    public void addIndex(int index, E addIn) {
-        for (int i = 0; i < arraySuperclass.length; i++) {
-            if (arraySuperclass[index] == null) {
-                arraySuperclass[index] = (E) addIn;
-                break;
-            }
-        }
-
-    }
-
-    public void remove(int index) {
-        for (int i = 0; i < arraySuperclass.length; i++) {
             if (arraySuperclass[i] != null) {
-                if (index == arraySuperclass[i].getId()) {
-                    arraySuperclass[i] = null;
+                continue;
+            }
+            arraySuperclass[i] = (E) addIn;
+            break;
+        }
+    }
+
+        public void addIndex ( int index, E addIn){
+            for (int i = 0; i < arraySuperclass.length; i++) {
+                if (arraySuperclass[index] == null) {
+                    arraySuperclass[index] = (E) addIn;
+                    break;
+                }
+            }
+
+        }
+
+        public void remove ( int index){
+            for (int i = 0; i < arraySuperclass.length; i++) {
+                if (arraySuperclass[i] != null) {
+                    if (index == arraySuperclass[i].getId()) {
+                        arraySuperclass[i] = null;
+                    }
                 }
             }
         }
     }
-}
