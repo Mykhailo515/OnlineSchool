@@ -18,9 +18,6 @@ public class GenericRepository<E extends SuperClass> {
     }
 
     public static void addLecture(SuperClass o) {
-        if (arraySuperclass[arraySuperclass.length - 1] != null) {
-            increaseCapacity();
-        }
         for (int i = 0; i < arraySuperclass.length; i++) {
             if (arraySuperclass[i] == null) {
                 arraySuperclass[i] = o;
@@ -82,25 +79,25 @@ public class GenericRepository<E extends SuperClass> {
         }
     }
 
-        public void addIndex ( int index, E addIn){
-            for (int i = 0; i < arraySuperclass.length; i++) {
-                if (arraySuperclass[index] == null) {
-                    arraySuperclass[index] = (E) addIn;
-                    break;
-                }
-            }
-
-        }
-
-        public void remove ( int index){
-            for (int i = 0; i < arraySuperclass.length; i++) {
-                if (arraySuperclass[i] != null) {
-                    if (index == arraySuperclass[i].getId()) {
-                        arraySuperclass[i] = null;
-                    }
-                }
+    public void addIndex(int index, E addIn) {
+        for (int i = 0; i < arraySuperclass.length; i++) {
+            if (arraySuperclass[index] == null) {
+                arraySuperclass[index] = (E) addIn;
+                break;
             }
         }
+
+    }
+
+    public void remove(int index) {
+        for (int i = 0; i < arraySuperclass.length; i++) {
+            if (arraySuperclass[i] != null) {
+                if (index == arraySuperclass[i].getId()) {
+                    arraySuperclass[i] = null;
+                }
+            }
+        }
+    }
 
     public static SuperClass[] getArraySuperclass() {
         return arraySuperclass;
