@@ -16,12 +16,6 @@ public class LectureRepository extends SuperRepository {
     }
 
 
-    @Override
-    public String toString() {
-        return "LecturesRepository{}";
-    }
-
-
     public static void addLecture(Lecture o) {
         if (lectureArray[lectureArray.length - 1] != null) {
             increaseCapacity();
@@ -60,6 +54,11 @@ public class LectureRepository extends SuperRepository {
 
     public static Lecture[] getIncreaseArray() {
         return increaseArray;
+    }
+
+    @Override
+    public String toString() {
+        return "LecturesRepository{}";
     }
 
     @Override

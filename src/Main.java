@@ -15,22 +15,16 @@ public class Main {
         LectureRepository objectLecture = new LectureRepository();
         GenericRepository genericRepository = new GenericRepository();
 
-        objectLecture.add(new Lecture(2, 2, 2, "second", "full"));
-        objectLecture.add(new Lecture(3, 3, 3, "third", "full"));
-        objectLecture.add(new Lecture(4, 4, 4, "fourth", "full"));
+        System.out.println(Arrays.toString(LectureRepository.getLectureArray()));
 
-        genericRepository.add(new Lecture(1,2,2,"5","5"));
+        objectLecture.addLecture(new Lecture(2, 2, 2, "second", "full"));
 
+        genericRepository.add(new Lecture(1,1,1,"first","full"));
+        genericRepository.add(new Lecture(2,2,2,"second","full"));
+        genericRepository.add(new Lecture(3,3,3,"third","third"));
 
-
-        LectureService.showElements();
-
-//        SuperRepository superRepository = new SuperRepository();
-//        superRepository.add(new Lecture(5, 5, 5, "fifth", "full"));
-//
-//        Person firstTeacher = new Person(1, 2, Role.TEACHER, "lastname", "firstname",
-//                "phone", "email");
-//        System.out.println(firstTeacher);
+        System.out.println(Arrays.toString(LectureRepository.getIncreaseArray()));
+        System.out.println(Arrays.toString(GenericRepository.getIncreaseArray()));
 
 
 

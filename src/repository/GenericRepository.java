@@ -6,9 +6,9 @@ import models.SuperClass;
 public class GenericRepository<E extends SuperClass> {
 
     private static int VALUE_ARRAY = 5;
+    private static SuperClass[] arraySuperclass;
 
     private static int newSize;
-    private static SuperClass[] arraySuperclass;
 
     private static SuperClass[] increaseArray;
 
@@ -17,8 +17,10 @@ public class GenericRepository<E extends SuperClass> {
         this.increaseArray = new SuperClass[newSize];
     }
 
-    public static void addLecture(Lecture o) {
-
+    public static void addLecture(SuperClass o) {
+        if (arraySuperclass[arraySuperclass.length - 1] != null) {
+            increaseCapacity();
+        }
         for (int i = 0; i < arraySuperclass.length; i++) {
             if (arraySuperclass[i] == null) {
                 arraySuperclass[i] = o;
@@ -36,6 +38,15 @@ public class GenericRepository<E extends SuperClass> {
         System.arraycopy(arraySuperclass, 0, increaseArray, 0, VALUE_ARRAY);
         arraySuperclass = increaseArray;
 
+    }
+
+    public static void newArray(Lecture o) {
+        for (int i = 0; i < increaseArray.length; i++) {
+            if (increaseArray[i] == null) {
+                increaseArray[i] = o;
+                break;
+            }
+        }
     }
 
 
@@ -90,4 +101,12 @@ public class GenericRepository<E extends SuperClass> {
                 }
             }
         }
+
+    public static SuperClass[] getArraySuperclass() {
+        return arraySuperclass;
     }
+
+    public static SuperClass[] getIncreaseArray() {
+        return increaseArray;
+    }
+}
